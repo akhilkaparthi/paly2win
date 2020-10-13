@@ -61,9 +61,7 @@ module.exports = {
   proxy: {
   '/api/hedera/five': {
     target: 'https://serene-lamarr-1d35c2.netlify.app/', changeOrigin: false
-  },
-  extend(config, ctx) {},
-   babel: { compact: true }
+  }
   /*
    ** Build configuration
    */
