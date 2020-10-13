@@ -14,7 +14,7 @@
     </div>
   </div>
 </template>
-
+Quiz App 2.0
 <script>
 import axios from "axios";
 

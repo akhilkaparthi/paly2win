@@ -7,21 +7,19 @@
       <div class="main">
         <div id="art">
           <h1>Play 2 Win</h1>
-          <h1>Quiz</h1>
+          <h1>H Bars</h1>
         </div>
-        <div class="cent">
-          <div class="left">
-            <b-button size="lg" variant="outline-primary" @click="five">Win 500ħ</b-button>
-            <h3>Entry Fee 5ħ</h3>
-          </div>
-          <div class="right">
-            <b-button size="lg" variant="outline-primary" @click="ten">Win 1000ħ</b-button>
-            <h3>Entry Fee 10ħ</h3>
+        <div>
+          <div class="mt-3">
+            <b-button-group>
+              <b-button size="lg" variant="success" @click="five" v-b-tooltip.hover="'Entry Fee 5ħ!'">Win 500ħ</b-button>
+              <b-button size="lg" variant="warning" @click="ten" v-b-tooltip.hover="'Entry Fee 10ħ!'">Win 1000ħ</b-button>
+            </b-button-group>
           </div>
         </div>
         <div class="account">
           <div>
-            <b-button id="show-btn" @click="$bvModal.show('bv-modal-example')">Load Account</b-button>
+            <b-button id="show-btn" variant="outline-primary" @click="$bvModal.show('bv-modal-example')">Load Account</b-button>
 
             <b-modal id="bv-modal-example" title="Load Your Hedera Account" hide-footer>
               <b-form-group label="Account Id" label-for="dropdown-form-email" @submit.stop.prevent>
@@ -51,10 +49,13 @@
           <p>
             <a href="https://buy.moonpay.io/hbar">click here</a> to get some HBAR into your hedera wallet
           </p>
+
         </div>
       </div>
     </b-overlay>
+
   </div>
+
 </template>
 
 <script>
@@ -138,18 +139,7 @@ export default {
           account: localStorage.account,
           pk: localStorage.pk
         };
-        axios
-          .post("https://floating-basin-51607.herokuapp.com/hedera/five", info)
-          .then(res => {
-            if (res.data.status == "SUCCESS") {
-              window.location = "/five/quiz";
-            } else {
-              alert("tx problem");
-            }
-          })
-          .catch(err => {
-            console.error(err);
-          });
+        window.location = "/five/quiz";
       } else {
         alert("Please Load Your Account Details To Play");
       }
@@ -183,6 +173,22 @@ export default {
 <style scoped>
 .content {
   background-color: blanchedalmond;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+.content {
+  /* The image used */
+  background-image: url('~@/assets/hh-1.jpg');
+
+  /* Full height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .main {
   margin: auto;

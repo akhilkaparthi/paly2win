@@ -1,18 +1,28 @@
 <template>
   <div class="question-box-container">
     <b-jumbotron>
-      <template slot="lead">{{ currentQuestion.question }}</template>
-
+    <b-card-group deck>
+     <b-card bg-variant="primary" text-variant="white" header="Question" class="text-center">
+     <b-card-text>{{ currentQuestion.question }}</b-card-text>
+    <!--  <template slot="lead">{{ currentQuestion.question }}</template>-->
+      </b-card>
+       </b-card-group>
       <hr class="my-4" />
 
       <b-list-group>
-        <b-list-group-item
+
+        <b-list-group-item class="d-flex align-items-center" variant="primary"
           v-for="(answer, index) in shuffledAnswers"
           :key="index"
           @click.prevent="selectAnswer(index)"
           :class="answerClass(index)"
           :disabled="answered ? '' : disabled"
-        >{{ answer }}</b-list-group-item>
+        >
+          <b-avatar variant="primary" class="mr-3">{{ index+1 }}</b-avatar>
+          <span class="mr-auto">{{ answer }}</span>
+        <!--{{ answer }}-->
+
+        </b-list-group-item>
       </b-list-group>
 
       <!--<b-button
