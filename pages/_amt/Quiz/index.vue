@@ -30,7 +30,7 @@ import Header from "../../../components/Header";
 import Result from "../../../components/Result";
 import QuestionBox from "../../../components/QuestionBox";
 import axios from "axios";
-import Loader from "../../../components/loader";
+import Loader from "../../../components/Loader";
 export default {
   name: "app",
   components: {
