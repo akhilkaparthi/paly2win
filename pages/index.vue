@@ -11,10 +11,17 @@
         </div>
         <div>
           <div class="mt-3">
-            <b-button-group>
+              <b-alert
+                :show="dismissCountDown"
+                dismissible
+                fade
+                variant="warning"
+                @dismiss-count-down="countDownChanged"
+              > Please choose below category for playing game.
+              </b-alert>
               <b-button size="lg" variant="success" @click="five" v-b-tooltip.hover="'Entry Fee 5ħ!'">Win 500ħ</b-button>
               <b-button size="lg" variant="warning" @click="ten" v-b-tooltip.hover="'Entry Fee 10ħ!'">Win 1000ħ</b-button>
-            </b-button-group>
+
           </div>
         </div>
         <div class="account">
@@ -71,7 +78,8 @@ export default {
     return {
       bal: 0,
       account: "",
-      pk: ""
+      pk: "",
+      dismissCountDown: 5
     };
   },
   /*created: function() {
