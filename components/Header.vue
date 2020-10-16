@@ -1,7 +1,7 @@
 <template>
+
   <div>
     <b-nav tabs>
-
           <b-button pill variant="success" disabled>
                    Crypto Trivia</b-badge>
            </b-button>
@@ -14,7 +14,9 @@
          <b-button pill variant="primary">
              Total Questions  <b-badge variant="light">10</b-badge>
          </b-button>
+
     </b-nav>
+
   </div>
 </template>
 

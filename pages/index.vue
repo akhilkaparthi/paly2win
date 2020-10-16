@@ -17,7 +17,7 @@
                 fade
                 variant="warning"
                 @dismiss-count-down="countDownChanged"
-              > Please choose below category for playing game.
+              > Please choose below category for playing quiz.
               </b-alert>
               <b-button size="lg" variant="success" @click="five" v-b-tooltip.hover="'Entry Fee 5ħ!'">Win 500ħ</b-button>
               <b-button size="lg" variant="warning" @click="ten" v-b-tooltip.hover="'Entry Fee 10ħ!'">Win 1000ħ</b-button>

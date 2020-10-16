@@ -1,7 +1,10 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark">
-      <b-navbar-brand to="/">Crypto Trivia</b-navbar-brand>
+      <b-img src="/logo-white-new_7003.png" fluid alt="Right image"></b-img>
+       <b-button style="margin-left:50px;" pill variant="success" to="/" >
+                         Crypto Trivia</b-badge>
+                 </b-button>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <!-- Right aligned nav items -->
