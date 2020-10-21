@@ -14,17 +14,10 @@
     }
   ],
   "routes": [
-    {
-      "headers": {
-        "Access-Control-Allow-Origin": "https://mailsender-delta.xxxxxx.xxx",
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Methods": "POST, OPTIONS, HEAD",
-        "Access-Control-Allow-Headers": "Access-Control-Allow-Methods, Access-Control-Allow-Headers, Access-Control-Allow-Credentials, Access-Control-Allow-Origin, Content-Type",
-        "Access-Control-Allow-Credentials": "true"
-      },
-      "src": "/.*",
-      "dest": "/server.js"
-    }
+
+    {  "src": "/api/(.*)", "dest": "api/index.js" },
+    { "src": "/api", "dest": "api/index.js" },
+    { "src": "/(.*)", "dest": "$1" }
   ]
 }
 
