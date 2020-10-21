@@ -216,7 +216,7 @@ html {
 }
 .content {
   /* The image used */
-  background-image: url("~@/assets/hh-1.jpg");
+  jokground-image: url("~@/assets/hh-1.jpg");
   background-color: blanchedalmond;
 
   /* Full height */
