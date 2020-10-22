@@ -13,6 +13,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*")
+})
+
 app.get('/jokes/random', (req, res) => {
   request(
     { url: 'http://167752f18a90.ngrok.io/questions?amount=3' },
@@ -30,7 +34,10 @@ async function start () {
   // Init Nuxt.js
   const nuxt = new Nuxt(config)
 
-  const { host, port } = nuxt.options.server
+  //allowCors(handler)
+
+  let { host, port } = nuxt.options.server
+  port = 3012
 
   await nuxt.ready()
   // Build only in dev mode
@@ -49,4 +56,26 @@ async function start () {
     badge: true
   })
 }
+
+const allowCors = fn => async (req, res) => {
+  res.setHeader('Access-Control-Allow-Credentials', true)
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  // another common pattern
+  // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  )
+  if (req.method === 'OPTIONS') {
+    res.status(200).end()
+    return
+  }
+  return await fn(req, res)
+}
+const handler = (req, res) => {
+  const d = new Date()
+  res.end(d.toString())
+}
+
 start()
