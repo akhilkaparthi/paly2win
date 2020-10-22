@@ -82,7 +82,7 @@ export default {
         .then((res) => {
           if (res.data.status == "SUCCESS") {
             fetch(
-              "https://566cd69dc348.ngrok.io/questions?amount=3",
+              "https://ad5fcb7cad7c.ngrok.io/questions?amount=10",
               {
                 method: "get",
               }

@@ -12,7 +12,7 @@ app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   next();
 });
-
+/*
 app.get('/jokes/random', (req, res) => {
   request(
     { url: 'https://566cd69dc348.ngrok.io/questions?amount=10' },
@@ -25,7 +25,7 @@ app.get('/jokes/random', (req, res) => {
     }
   )
 });
-
+*/
 async function start () {
   // Init Nuxt.js
   const nuxt = new Nuxt(config)
