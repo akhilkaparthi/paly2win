@@ -35,7 +35,7 @@ export default {
 <style scoped>
 .balance {
   position: absolute;
-  left: 75%;
+  left: 70%;
   bottom: 59%;
   color: rgb(187, 187, 187);
 }
