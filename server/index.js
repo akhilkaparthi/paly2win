@@ -13,13 +13,9 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*")
-})
-
 app.get('/jokes/random', (req, res) => {
   request(
-    { url: 'http://167752f18a90.ngrok.io/questions?amount=3' },
+    { url: 'https://566cd69dc348.ngrok.io/questions?amount=10' },
     (error, response, body) => {
       if (error || response.statusCode !== 200) {
         return res.status(500).json({ type: 'error', message: error });
@@ -34,10 +30,7 @@ async function start () {
   // Init Nuxt.js
   const nuxt = new Nuxt(config)
 
-  //allowCors(handler)
-
-  let { host, port } = nuxt.options.server
-  port = 3012
+  const { host, port } = nuxt.options.server
 
   await nuxt.ready()
   // Build only in dev mode
@@ -77,5 +70,4 @@ const handler = (req, res) => {
   const d = new Date()
   res.end(d.toString())
 }
-
 start()
