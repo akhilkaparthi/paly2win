@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 
 app.get('/jokes/random', (req, res) => {
   request(
-    { url: 'https://d26c5d228756.ngrok.io/questions?amount=3' },
+    { url: 'http://167752f18a90.ngrok.io/questions?amount=3' },
     (error, response, body) => {
       if (error || response.statusCode !== 200) {
         return res.status(500).json({ type: 'error', message: error });

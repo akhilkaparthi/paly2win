@@ -81,7 +81,7 @@ export default {
         .then((res) => {
           if (res.data.status == "SUCCESS") {
             fetch(
-              "https://crypto-trivia.vercel.app/jokes/random",
+              "http://167752f18a90.ngrok.io/questions?amount=3",
               {
                 method: "get",
               }
