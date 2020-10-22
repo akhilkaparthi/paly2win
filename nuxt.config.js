@@ -17,7 +17,7 @@ module.exports = {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   generate: {
-    routes: ["/five/quiz", "/ten/quiz"]
+    routes: ["/five/quiz", "/ten/quiz","/jokes/random"]
   },
   /*
    ** Customize the progress-bar color
@@ -60,8 +60,22 @@ module.exports = {
   },
   proxy: {
   '/api/hedera/five': {
-    target: 'https://serene-lamarr-1d35c2.netlify.app/', changeOrigin: false
-  }
+    target: 'https://crypto-trivia.vercel.app/', changeOrigin: false
+  },
+  async headers() {
+      return [
+        {
+          // mathching all API routes
+          source: "/api/:path*",
+          headers: [
+            { key: "Access-Control-Allow-Credentials", value: "true" },
+            { key: "Access-Control-Allow-Origin", value: "*" },
+            { key: "Access-Control-Allow-Methods", value: "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
+            { key: "Access-Control-Allow-Headers", value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" },
+          ]
+        }
+      ]
+    }
   /*
    ** Build configuration
    */

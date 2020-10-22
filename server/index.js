@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 
 app.get('/jokes/random', (req, res) => {
   request(
-    { url: 'https://young-fireant-20.loca.lt/questions?amount=3' },
+    { url: 'https://blue-grasshopper-28.loca.lt/questions?amount=3' },
     (error, response, body) => {
       if (error || response.statusCode !== 200) {
         return res.status(500).json({ type: 'error', message: error });
