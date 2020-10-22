@@ -2,7 +2,7 @@
   <div class="content">
     <b-overlay :show="show" rounded="sm">
       <div id="nav">
-        <Nav />
+        <Nav :loading="bal" />
       </div>
       <div class="main">
         <div id="art">
@@ -11,15 +11,7 @@
         </div>
         <div>
           <div class="mt-3">
-            <b-alert
-              :show="dismissCountDown"
-              dismissible
-              fade
-              variant="warning"
-              @dismiss-count-down="countDownChanged"
-            >
-              Please choose below category for playing quiz.
-            </b-alert>
+
             <b-button
               id="buttonFee1"
               class="buttonFee"
@@ -27,7 +19,7 @@
               variant="success"
               @click="five"
               v-b-tooltip.hover="'Entry Fee 5ħ!'"
-            >Win 500ħ</b-button
+            >Win 100ħ</b-button
             >
             <b-button
               id="buttonFee2"
@@ -36,7 +28,7 @@
               variant="warning"
               @click="ten"
               v-b-tooltip.hover="'Entry Fee 10ħ!'"
-            >Win 1000ħ</b-button
+            >Win 200ħ</b-button
             >
           </div>
         </div>

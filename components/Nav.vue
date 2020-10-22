@@ -6,7 +6,7 @@
         Crypto Trivia
       </b-button>
       <h5 class="balance">
-        <span class="iconB">B</span>1000h <a href="">(Buy)</a>
+        <span class="iconB"></span>Balance: {{ loading }}  <a href="https://buy.moonpay.io/hbar">(Buy)</a>
       </h5>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -25,10 +25,17 @@
   </div>
 </template>
 
+
+<script>
+export default {
+  props: { loading: Number },
+};
+</script>
+
 <style scoped>
 .balance {
   position: absolute;
-  left: 85%;
+  left: 75%;
   bottom: 59%;
   color: rgb(187, 187, 187);
 }
