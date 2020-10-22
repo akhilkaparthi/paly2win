@@ -81,7 +81,7 @@ export default {
         .then((res) => {
           if (res.data.status == "SUCCESS") {
             fetch(
-              "https://opentdb.com/api.php?amount=10&category=9&type=multiple",
+              "https://crypto-trivia.vercel.app/jokes/random",
               {
                 method: "get",
               }
