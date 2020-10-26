@@ -5,6 +5,7 @@ const { Client,AccountBalanceQuery, CryptoTransferTransaction } = require('@hash
 
 router.route('/bal').post(async (req, res) => {
     console.log(req.body)
+    alert("iam here");
     const client = Client.forTestnet();
     client.setOperator(req.body.account, req.body.pk);
     const balance = await new AccountBalanceQuery()
@@ -21,7 +22,7 @@ router.route('/bal').post(async (req, res) => {
     client.setOperator(req.body.account, req.body.pk);
     receipt =await( await new CryptoTransferTransaction()
     .addSender(req.body.account, 500_000_000)
-    .addRecipient('0.0.49451', 500_000_000)
+    .addRecipient('0.0.17187', 500_000_000)
     .build(client)
     .execute(client))
     .getReceipt(client);
@@ -33,7 +34,7 @@ router.route('/bal').post(async (req, res) => {
     client.setOperator(req.body.account, req.body.pk);
     receipt =await (await new CryptoTransferTransaction()
     .addSender(req.body.account, 1000_000_000)
-    .addRecipient('0.0.49451', 1000_000_000)
+    .addRecipient('0.0.17187', 1000_000_000)
     .build(client)
     .execute(client))
     .getReceipt(client);
@@ -43,8 +44,8 @@ router.route('/bal').post(async (req, res) => {
   router.route('/fiveh').post(async (req, res) => {
     console.log(req.body.message)
     receipt =await (await new CryptoTransferTransaction()
-    .addSender('0.0.49451', 500_000_000_000)
-    .addRecipient(req.body.account, 500_000_000_000)
+    .addSender('0.0.17187', 100_000_000_000)
+    .addRecipient(req.body.account, 100_000_000_000)
     .build(HederaClient)
     .execute(HederaClient))
     .getReceipt(HederaClient);
@@ -55,7 +56,7 @@ router.route('/bal').post(async (req, res) => {
   router.route('/tenh').post(async (req, res) => {
     console.log(req.body.message)
     receipt =await (await new CryptoTransferTransaction()
-    .addSender('0.0.49451', 1000_000_000_000)
+    .addSender('0.0.17187', 1000_000_000_000)
     .addRecipient(req.body.account, 1000_000_000_000)
     .build(HederaClient)
     .execute(HederaClient))
@@ -63,5 +64,5 @@ router.route('/bal').post(async (req, res) => {
     res.json(receipt);
   });
 
-  
+
   module.exports = router;

@@ -60,7 +60,7 @@ module.exports = {
   },
   proxy: {
   '/api/hedera/five': {
-    target: 'https://crypto-trivia.vercel.app/', changeOrigin: false
+    target: 'https://hedera20node.herokuapp.com', changeOrigin: false
   },
   async headers() {
       return [

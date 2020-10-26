@@ -78,11 +78,11 @@ export default {
       };
 
       axios
-        .post("https://floating-basin-51607.herokuapp.com/hedera/five", info)
+        .post("https://hedera20node.herokuapp.com/hedera/five", info)
         .then((res) => {
           if (res.data.status == "SUCCESS") {
             fetch(
-              "https://af1436b47145.ngrok.io/questions?amount=10",
+              "https://9b7e72701fee.ngrok.io/questions?amount=10",
               {
                 method: "get",
               }
