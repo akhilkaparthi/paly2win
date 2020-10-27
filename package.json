@@ -4,6 +4,11 @@
   "description": "Web Quiz app",
   "author": "Harshak777",
   "private": true,
+  "config": {
+    "nuxt": {
+      "port": "8080"
+    }
+  },
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build",

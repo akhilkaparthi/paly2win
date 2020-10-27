@@ -82,7 +82,7 @@ export default {
         .then((res) => {
           if (res.data.status == "SUCCESS") {
             fetch(
-              "http://ec2-3-8-188-72.eu-west-2.compute.amazonaws.com:8080/questions?amount=10",
+              "http://localhost:3000/questions?amount=10",
               {
                 method: "get",
               }
