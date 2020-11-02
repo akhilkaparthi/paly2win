@@ -436,3 +436,119 @@ found in
 
  READY  Server listening on http://localhost:8080
 
+[Vue warn]: Property or method "show" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
+
+found in
+
+---> <Pages/index.vue> at pages/index.vue
+       <Nuxt>
+         <Layouts/default.vue> at layouts/default.vue
+           <Root>
+[Vue warn]: Property or method "show" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
+
+found in
+
+---> <Pages/index.vue> at pages/index.vue
+       <Nuxt>
+         <Layouts/default.vue> at layouts/default.vue
+           <Root>
+
+ WARN  mode option is deprecated. You can safely remove it from nuxt.config
+
+ℹ Preparing project for development
+ℹ Initial build may take a while
+✔ Builder initialized
+✔ Nuxt files generated
+ℹ Compiling Server
+ℹ Compiling Server
+ℹ Compiling Client
+ℹ Compiling Client
+ℹ Compiling Client
+ℹ Compiling Server
+[Vue warn]: Property or method "show" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
+
+found in
+
+---> <Pages/index.vue> at pages/index.vue
+       <Nuxt>
+         <Layouts/default.vue> at layouts/default.vue
+           <Root>
+✔ Server: Compiled successfully in 1.02s
+✔ Server: Compiled successfully in 1.02s
+✔ Client: Compiled successfully in 1.22s
+✔ Client: Compiled successfully in 1.26s
+✔ Server: Compiled successfully in 4.25s
+✔ Client: Compiled successfully in 5.35s
+ℹ Waiting for file changes
+
+ READY  Server listening on http://localhost:8080
+
+events.js:292
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 127.0.0.1:8080
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at GetAddrInfoReqWrap.doListen [as callback] (net.js:1498:7)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:68:8)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1340:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'listen',
+  address: '127.0.0.1',
+  port: 8080
+}
+
+ WARN  mode option is deprecated. You can safely remove it from nuxt.config
+
+ℹ Preparing project for development
+ℹ Initial build may take a while
+✔ Builder initialized
+✔ Nuxt files generated
+ℹ Compiling Client
+ℹ Compiling Server
+✔ Server: Compiled successfully in 3.56s
+✔ Client: Compiled successfully in 4.59s
+ℹ Waiting for file changes
+
+ READY  Server listening on http://0.0.0.0:8080
+
+[Vue warn]: Property or method "show" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
+
+found in
+
+---> <Pages/index.vue> at pages/index.vue
+       <Nuxt>
+         <Layouts/default.vue> at layouts/default.vue
+           <Root>
+/Users/akhilkaparthi/Documents/WorkSpace/CryptoTrivia/server/index.js:7
+const host = 0.0.0.0;
+                ^^
+
+SyntaxError: Unexpected number
+    at wrapSafe (internal/modules/cjs/loader.js:1053:16)
+    at Module._compile (internal/modules/cjs/loader.js:1101:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+[Vue warn]: Property or method "show" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
+
+found in
+
+---> <Pages/index.vue> at pages/index.vue
+       <Nuxt>
+         <Layouts/default.vue> at layouts/default.vue
+           <Root>
+[Vue warn]: Property or method "show" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
+
+found in
+
+---> <Pages/index.vue> at pages/index.vue
+       <Nuxt>
+         <Layouts/default.vue> at layouts/default.vue
+           <Root>
