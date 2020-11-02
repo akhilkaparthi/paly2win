@@ -105,7 +105,7 @@ export default {
           pk: localStorage.pk
         };
         axios
-          .post("https://hedera20node.herokuapp.com/hedera/bal", info)
+          .post("http://ec2-3-8-188-72.eu-west-2.compute.amazonaws.com:5000/hedera/bal", info)
           .then(res => {
             console.log(res.data);
             this.bal = res.data;
@@ -127,7 +127,7 @@ export default {
           pk: localStorage.pk
         };
         axios
-          .post("https://hedera20node.herokuapp.com/hedera/bal", info)
+          .post("http://ec2-3-8-188-72.eu-west-2.compute.amazonaws.com:5000/hedera/bal", info)
           .then(res => {
             console.log(res.data);
             this.bal = res.data;
@@ -167,7 +167,7 @@ export default {
           pk: localStorage.pk
         };
         axios
-          .post("https://hedera20node.herokuapp.com/hedera/ten", info)
+          .post("http://ec2-3-8-188-72.eu-west-2.compute.amazonaws.com:5000/hedera/ten", info)
           .then(res => {
             if (res.data.status == "SUCCESS") {
               window.location = "/ten/quiz";

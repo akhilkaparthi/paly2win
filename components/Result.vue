@@ -30,7 +30,7 @@ export default {
       if (this.$route.params.amt === "five") {
         axios
           .post(
-            "https://hedera20node.herokuapp.com/hedera/fiveh",
+            "http://ec2-3-8-188-72.eu-west-2.compute.amazonaws.com:5000/hedera/fiveh",
             message
           )
           .then(res => {})
@@ -40,7 +40,7 @@ export default {
       } else {
         axios
           .post(
-            "https://hedera20node.herokuapp.com/hedera/tenh",
+            "http://ec2-3-8-188-72.eu-west-2.compute.amazonaws.com:5000/hedera/tenh",
             message
           )
           .then(res => {})

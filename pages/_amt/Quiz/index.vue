@@ -78,7 +78,7 @@ export default {
       };
 
       axios
-        .post("https://hedera20node.herokuapp.com/hedera/five", info)
+        .post("http://ec2-3-8-188-72.eu-west-2.compute.amazonaws.com:5000/hedera/five", info)
         .then((res) => {
           if (res.data.status == "SUCCESS") {
             fetch(
