@@ -14,7 +14,8 @@
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node server/index.js",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "hedera" : "nohup node server/index.js &"
   },
   "dependencies": {
     "@hashgraph/sdk": "^1.4.1",
