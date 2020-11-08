@@ -3,8 +3,7 @@ const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 const app = express()
 const request = require('request');
-const port = 8080;
-const host = 0.0.0.0;
+
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')
 config.dev = process.env.NODE_ENV !== 'production'
@@ -31,7 +30,7 @@ async function start () {
   // Init Nuxt.js
   const nuxt = new Nuxt(config)
 
- // const { host } = nuxt.options.server
+  const { host, port } = nuxt.options.server
 
   await nuxt.ready()
   // Build only in dev mode

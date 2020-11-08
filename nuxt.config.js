@@ -17,7 +17,7 @@ module.exports = {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   generate: {
-    routes: ["/five/quiz", "/ten/quiz","/jokes/random"]
+    routes: ["/five/quiz", "/ten/quiz"]
   },
   /*
    ** Customize the progress-bar color
@@ -34,7 +34,9 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+      { src: 'plugins/amplify.js', mode: 'client' }
+   ],
   /*
    ** Nuxt.js dev-modules
    */

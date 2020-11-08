@@ -105,7 +105,7 @@ export default {
           pk: localStorage.pk
         };
         axios
-          .post("http://ec2-3-8-188-72.eu-west-2.compute.amazonaws.com:5000/hedera/bal", info)
+          .post("http://backendhederasdk-env.eba-tznzup9x.eu-west-2.elasticbeanstalk.com/hedera/bal", info)
           .then(res => {
             console.log(res.data);
             this.bal = res.data;
@@ -127,7 +127,7 @@ export default {
           pk: localStorage.pk
         };
         axios
-          .post("http://ec2-3-8-188-72.eu-west-2.compute.amazonaws.com:5000/hedera/bal", info)
+          .post("http://backendhederasdk-env.eba-tznzup9x.eu-west-2.elasticbeanstalk.com/hedera/bal", info)
           .then(res => {
             console.log(res.data);
             this.bal = res.data;
